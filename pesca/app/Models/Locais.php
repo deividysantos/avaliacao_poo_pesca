@@ -14,5 +14,10 @@ class Locais extends Model
     protected $fillable = [
         'descricao',
         'cidade',
-    ];      
+    ];
+
+    public function pescarias()
+    {
+        return $this->hasMany(Pescaria::class, 'id_local');
+    }
 }

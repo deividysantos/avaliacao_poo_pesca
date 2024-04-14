@@ -16,4 +16,9 @@ class Pescador extends Model
         'idade',
         'numero_licensa',
     ];
+
+    public function pescarias()
+    {
+        return $this->hasMany(Pescaria::class, 'id_pescador');
+    }
 }
